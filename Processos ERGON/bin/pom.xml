@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>br.com.techne</groupId>
+  <artifactId>test-automatizado</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>test-automatizado</name>
+  <url>http://maven.apache.org</url>
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <directory>resources</directory>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <encoding>${project.build.sourceEncoding}</encoding>
+          <argLine>-Dfile.encoding=UTF-8</argLine>
+        </configuration>
+      </plugin>
+
+      <!-- para teste , copiar as dependencias para o path do projeto comando > "mvn dependency:copy-dependencies" <plugin>
+        <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-dependency-plugin</artifactId> <version>2.10</version> <executions>
+        <execution> <id>copy-dependencies</id> <phase>package</phase> <goals> <goal>copy-dependencies</goal> </goals> <configuration>
+        <outputDirectory>${project.build.directory}</outputDirectory> <overWriteReleases>false</overWriteReleases> <overWriteSnapshots>true</overWriteSnapshots>
+        <overWriteIfNewer>true</overWriteIfNewer> </configuration> </execution> </executions> </plugin> -->
+
+    </plugins>
+  </build>
+
+	<repositories>
+		<!-- Repositório interno de dependências de terceiros -->
+		<repository>
+			<id>artifactory-libs</id>
+			<name>artifactory-libs</name>
+			<url>http://artifactory.techne.com.br/ext-release-local</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>artifactory-releases</id>
+			<name>artifactory-releases</name>
+			<url>http://artifactory.techne.com.br/libs-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>artifactory-snapshots</id>
+			<name>artifactory-snapshots</name>
+			<url>http://artifactory.techne.com.br/libs-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<properties>
+		<!-- Encoding padrão utilizado em todo fonte -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<!-- Environment Dependencies -->
+		<jdk.version>1.8</jdk.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+		<groupId>org.seleniumhq.selenium</groupId>
+		<artifactId>selenium-java</artifactId>
+		<version>2.47.1</version>
+	</dependency>
+	
+	<!--<dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>fluent-hc</artifactId>
+      <version>4.2.1</version>
+      <scope>test</scope> 
+    </dependency>-->
+	
+ 	<!--<dependency>
+		<groupId>org.sikuli</groupId>
+		<artifactId>sikuli-api</artifactId>
+		<version>1.2.0</version>
+	</dependency>-->
+	
+  </dependencies>
+</project>
