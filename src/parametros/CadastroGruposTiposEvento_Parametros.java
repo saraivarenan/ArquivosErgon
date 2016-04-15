@@ -5,10 +5,10 @@ public class CadastroGruposTiposEvento_Parametros {
 	static String inputGrupo;
 	static String inputDesc;
 	public static String getInputGrupo() {
-		return "";
+		return "A2-Script";
 	}
 	public static String getInputDesc() {
-		return "";
+		return "A1 - TipoEventDesc";
 	}
 	
 	

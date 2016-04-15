@@ -2,22 +2,26 @@ package parametros;
 
 public class CadastroCategoriaSub_Paramentros {
 	
-	public static String  txtCatSigla;
-	public static String  txtCatNome;
-	public static String  txtSubCatSigla;
-	public static String  txtSubCatNome;
-	
+	 static String  txtCatSigla;
+	 static String  txtCatNome;
+	 static String  txtSubCatSigla;
+	 static String  txtSubCatNome;
+	 
+
+	//aba Detalhes
 	public static String  getTxtCatSigla() {
-		return "";
+		return "A2-Script";
 	}
 	public static String  getTxtCatNome() {
-		return "";
+		return "Categoria_Auto";
 	}
+	
+	// aba Subcategorias
 	public static String  getTxtSubCatSigla() {
-		return "";
+		return "A1- SubCategoria";
 	}
 	public static String  getTxtSubCatNome() {
-		return "";
+		return "SubCategoria_Auto";
 	}
 	
 

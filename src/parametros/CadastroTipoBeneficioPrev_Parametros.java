@@ -5,10 +5,10 @@ public class CadastroTipoBeneficioPrev_Parametros {
 	static String txtNome;
 	
 	public static String getTxtSigla() {
-		return txtSigla;
+		return "A2-Script";
 	}
 	public static String getTxtNome() {
-		return txtNome;
+		return "Tipo de Teste";
 	}
 	
 	

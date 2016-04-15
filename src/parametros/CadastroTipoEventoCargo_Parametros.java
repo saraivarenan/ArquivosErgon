@@ -9,31 +9,40 @@ public class CadastroTipoEventoCargo_Parametros {
 	static String txtPrioridade_exerc;
 	static String txtPrioridadepagto;
 	static String drpDescr_formaprov;
-	static String drpDescr;
+	static String drpDescrTipoCargo;
+	static String drpGrupo;
 	
 	public static String getTxtTipoevento() {
-		return "";
+		return "A2-Script";
 	}
 	public static String getTxtNomeevt() {
-		return "";
+		return "Script Nome";
 	}
 	public static String getDrpNatureza() {
-		return "";
+		String Nat =TabelaGeralCadastroNatureza_Parametros.getItem()+" - "+TabelaGeralCadastroNatureza_Parametros.getDescricao();
+		return Nat;
 	}
 	public static String getDrpNatureza_principal() {
-		return "";
+		return "PROVIMENTO - Provimento";
+	}
+	
+	public static String getDrpGrupo() {
+		String GrupoEvenc = CadastroGruposTiposEvento_Parametros.getInputGrupo()+" - "+CadastroGruposTiposEvento_Parametros.getInputDesc();
+		return GrupoEvenc;
 	}
 	public static String getTxtPrioridade_exerc() {
-		return "";
+		return "1";
 	}
 	public static String getTxtPrioridadepagto() {
-		return "";
+		return "1";
 	}
 	public static String getDrpDescr_formaprov() {
-		return "";
+		String formasProv =FromasProvimentoEspeciesEventoCargos_Parametros.getInputSigla() +" - "+ FromasProvimentoEspeciesEventoCargos_Parametros.getInputDescSigla();
+		return formasProv;
 	}
-	public static String getDrpDescr() {
-		return "";
+	public static String getDrpDescrTipoCargo() {
+		//Página tabela Geral 
+		return "Auto_Tipos_cargo";
 	}
 	
 	

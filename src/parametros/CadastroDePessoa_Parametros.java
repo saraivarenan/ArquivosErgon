@@ -10,22 +10,22 @@ public class CadastroDePessoa_Parametros {
 	static String drpSexo;
 	
 	public static String getTxtNome() {
-		return "";
+		return "Teste_automatico";
 	}
 	public static String getTxtCpf() {
-		return "";
+		return "27168168592";
 	}
 	public static String getDrpEstcivil() {
-		return "";
+		return "Solteiro";
 	}
 	public static String getDrpEscolaridade() {
-		return "";
+		return "Doutorado - Doutorado";
 	}
 	public static String getTxtDtnasc() {
-		return "";
+		return "01011990";
 	}
 	public static String getDrpSexo() {
-		return "";
+		return "M - Masculino";
 	}
 	
 	

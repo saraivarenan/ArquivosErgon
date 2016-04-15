@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
+import parametros.TabelaGeralCadastroNatureza_Parametros;
 import utilitarios.ContextFirefox;
 import utilitarios.Utilizaveis;
 
@@ -17,7 +18,7 @@ public class TabelaGeralCadastroNatureza extends ContextFirefox {
 		Utilizaveis.tempo(3);
 		
 		WebElement filtroDePesquisa = getDriver().findElement(By.id("txbTabela"));
-		filtroDePesquisa.sendKeys("NATUREZA_EV");
+		filtroDePesquisa.sendKeys(TabelaGeralCadastroNatureza_Parametros.getFiltroDePesquisa());
 		filtroDePesquisa.sendKeys(Keys.TAB);
 		Utilizaveis.tempo(3);
 		
@@ -31,10 +32,10 @@ public class TabelaGeralCadastroNatureza extends ContextFirefox {
 		
 		
 		WebElement item = getDriver().findElement(By.xpath("//input[@name='item']"));
-		item.sendKeys("ScriptAuto NATUREZA");
+		item.sendKeys(TabelaGeralCadastroNatureza_Parametros.getItem());
 
 		WebElement descricao = getDriver().findElement(By.xpath("//input[@name='descr']"));
-		descricao.sendKeys("Descrição do Item");
+		descricao.sendKeys(TabelaGeralCadastroNatureza_Parametros.getDescricao());
 
 		getDriver().findElement(By.xpath("//button[@class=' x-btn-text t-button save']")).click();
 		Thread.sleep(3000);

@@ -1,14 +1,15 @@
 package parametros;
 
 public class RegimeJuridico_Parametros {
+	
 	static String inputSigla;
 	static String inputNome;
 	
 	public static String getInputSigla() {
-		return "";
+		return "A2-Script";
 	}
 	public static String getInputNome() {
-		return "";
+		return "A1- RegJuridNome";
 	}
 	
 	

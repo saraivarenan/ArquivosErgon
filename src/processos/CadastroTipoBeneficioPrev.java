@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import parametros.CadastroTipoBeneficioPrev_Parametros;
 import utilitarios.ContextFirefox;
 import utilitarios.Utilizaveis;
 
@@ -17,10 +18,10 @@ public class CadastroTipoBeneficioPrev extends ContextFirefox {
 		Utilizaveis.clicarNovo();
 		
 		WebElement siglaPrev = getDriver().findElement(By.id("txtSigla"));
-		siglaPrev.sendKeys("Auto_Tipo_Bene_Prev");
+		siglaPrev.sendKeys(CadastroTipoBeneficioPrev_Parametros.getTxtSigla());
 		
 		WebElement descPrev = getDriver().findElement(By.id("txtNome"));
-				descPrev.sendKeys("Auto_desc_bene_prev");
+				descPrev.sendKeys(CadastroTipoBeneficioPrev_Parametros.getTxtNome());
 		
 		Utilizaveis.clicarSalvar();
 		

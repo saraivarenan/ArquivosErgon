@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import parametros.RegimeJuridico_Parametros;
 import utilitarios.ContextFirefox;
 import utilitarios.Utilizaveis;
 
@@ -21,10 +22,10 @@ public class RegimeJuridico extends ContextFirefox {
 		Utilizaveis.clicarNovo();
 		
 		WebElement inputSigla = getDriver().findElement(By.xpath("//input[@name='sigla']"));
-		inputSigla.sendKeys("Reg_Est_Auto");
+		inputSigla.sendKeys(RegimeJuridico_Parametros.getInputSigla());
 
 		WebElement inputNome = getDriver().findElement(By.xpath("//input[@name='nome']"));
-		inputNome.sendKeys("Descrição Reg_Est_Auto");
+		inputNome.sendKeys(RegimeJuridico_Parametros.getInputNome());
 		Utilizaveis.tempo(2);
 		
 		Utilizaveis.clicarSalvar();

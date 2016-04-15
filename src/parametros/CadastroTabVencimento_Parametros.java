@@ -9,19 +9,19 @@ public class CadastroTabVencimento_Parametros {
 	static String inputNomeAba2;
 	
 	public static String getInputTabela() {
-		return "";
+		return "A2-Script";
 	}
 	public static String getInputNome() {
-		return "";
+		return "Auto_Script";
 	}
 	public static String getInputLabel() {
-		return "";
+		return "Script A2";
 	}
 	public static String getInputOrdem() {
-		return "";
+		return "1";
 	}
 	public static String getInputNomeAba2() {
-		return "";
+		return "Ref_Auto";
 	}
 	
 	

@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import parametros.CadastroGruposTiposEvento_Parametros;
 import utilitarios.ContextFirefox;
 import utilitarios.Utilizaveis;
 
@@ -17,10 +18,10 @@ public class GruposTiposEvento extends ContextFirefox {
 		Utilizaveis.clicarNovo();
 		
 		WebElement inputGrupo = getDriver().findElement(By.xpath("//input[@name='grupo']"));
-		inputGrupo.sendKeys("Grupo_EV_Auto");
+		inputGrupo.sendKeys(CadastroGruposTiposEvento_Parametros.getInputGrupo());
 
 		WebElement inputDesc = getDriver().findElement(By.xpath("//input[@name='descricao']"));
-		inputDesc.sendKeys("Descrição do teste");
+		inputDesc.sendKeys(CadastroGruposTiposEvento_Parametros.getInputDesc());
 		
 		Utilizaveis.clicarSalvar();
 		

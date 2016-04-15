@@ -46,6 +46,7 @@ public class Utilizaveis extends ContextFirefox{
 		while (!nomeFunc.equals("@@@")) {
 			drpNome.sendKeys(Keys.ARROW_DOWN);
 			drpNome.sendKeys(Keys.ARROW_DOWN);
+			drpNome.sendKeys(Keys.ARROW_DOWN);
 			drpNome.sendKeys(Keys.ENTER);
 			nomeFunc = drpNome.getAttribute("value");
 			cont++;
@@ -64,6 +65,8 @@ public class Utilizaveis extends ContextFirefox{
 
 		}
 	}
+	
+	
 	public static void buscaDropReverso(WebElement ElementoDrp, String ValorComparado) {
 
 		int cont = 0;
@@ -81,7 +84,7 @@ public class Utilizaveis extends ContextFirefox{
 				ElementoDrp.sendKeys(Keys.TAB);
 				break;
 
-			} else if (cont > 30) {
+			} else if (cont > 50) {
 				System.out.println("Valor não encontrado");
 				break;
 

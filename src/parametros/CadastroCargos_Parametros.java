@@ -2,8 +2,6 @@ package parametros;
 
 public class CadastroCargos_Parametros {
 	
-
-	
 	//Aba Historico de cargo
 	static String inputInicio;
 	static String drpTabelaVencimentos;
@@ -12,7 +10,7 @@ public class CadastroCargos_Parametros {
 	static String drpSindicato;
 	static String inputInsalubridade;
 	static String inputPericulosidade;
-	static String  inputDiasPrazoPosse;
+	static String inputDiasPrazoPosse;
 	static String inputProrrogacaoPosse;
 	
 	//Aba Detalhes
@@ -26,57 +24,76 @@ public class CadastroCargos_Parametros {
 	static String drpTipocargo;
 	static String drpEscolaridade;
 	
+	//Grid Jornada
+	
+	static String drpJornada; 
+	
+	//aba detalhes
+	public static String getInputCargo() {
+		return "99991";
+	}
+	public static String getInputDescCargo() {
+		return "A2-Script";
+	}
+	public static String getDrpControlevaga() {
+		return "Livre";
+	}
+	public static String getDrpCategoria() {
+		String cat =CadastroCategoriaSub_Paramentros.getTxtCatSigla()+" - "+CadastroCategoriaSub_Paramentros.getTxtCatNome();
+		return cat;
+	}
+	public static String getDrpSubcategoria() {
+		String SubCat =CadastroCategoriaSub_Paramentros.getTxtSubCatSigla()+" - "+CadastroCategoriaSub_Paramentros.getTxtSubCatNome();
+		return SubCat;
+	}
+	public static String getDrpCargoFunçao() {
+		return "Cargo efetivo";
+	}
+	public static String getDrpTipocargo() {
+		return "Auto_Tipos_cargo - Auto_Tipos_cargo";
+	}
+	public static String getDrpEscolaridade() {
+		return "Doutorado-Doutorado";
+	}
+	
+	//aba Historico
+	
 	public static String getInputInicio() {
 		return "01012016";
 	}
 	public static String getDrpTabelaVencimentos() {
-		return "";
+		String TabVenc = CadastroTabVencimento_Parametros.getInputTabela()+" - "+ CadastroTabVencimento_Parametros.getInputNome();
+		return TabVenc;
 	}
 	public static String getDrpReferenciaInicial() {
-		return "";
+		String ReferencIni = CadastroTabVencimento_Parametros.getInputNomeAba2();
+		return ReferencIni;
 	}
 	public static String getDrpReferenciaFinal() {
-		return "";
+		String ReferencIni = CadastroTabVencimento_Parametros.getInputNomeAba2();
+		return ReferencIni;
 	}
 	public static String getDrpSindicato() {
-		return "";
+		String sind = CadastroSindicato_Parametros.getTxtSigla() +" - "+CadastroSindicato_Parametros.getTxtNome();
+		return sind;
 	}
 	public static String getInputInsalubridade() {
-		return "";
+		return "10";
 	}
 	public static String getInputPericulosidade() {
-		return "";
+		return "10";
 	}
 	public static String getInputDiasPrazoPosse() {
-		return "";
+		return "10";
 	}
 	public static String getInputProrrogacaoPosse() {
-		return "";
+		return "5";
 	}
-	public static String getInputCargo() {
-		return "";
+	public static String getDrpJornada() {
+		String JornDrp = CadastroJornadaTrab_Parametros.getTxfeSigla() +" - "+CadastroJornadaTrab_Parametros.getTxfeNome();
+		return JornDrp;
 	}
-	public static String getInputDescCargo() {
-		return "";
-	}
-	public static String getDrpControlevaga() {
-		return "";
-	}
-	public static String getDrpCategoria() {
-		return "";
-	}
-	public static String getDrpSubcategoria() {
-		return "";
-	}
-	public static String getDrpCargoFunçao() {
-		return "";
-	}
-	public static String getDrpTipocargo() {
-		return "";
-	}
-	public static String getDrpEscolaridade() {
-		return "";
-	}
+
 	
 	
 	

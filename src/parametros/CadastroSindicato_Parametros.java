@@ -7,13 +7,13 @@ public class CadastroSindicato_Parametros {
 	static String txtDesc;
 	
 	public static String getTxtSigla() {
-		return "";
+		return "A2-Script";
 	}
 	public static String getTxtNome() {
-		return "";
+		return "Teste_Auto";
 	}
 	public static String getTxtDesc() {
-		return "";
+		return "Teste_AutoDesc";
 	}
 	
 	

@@ -7,13 +7,13 @@ public class TabelaGeralCadastroNatureza_Parametros {
 	static String descricao;
 	
 	public static String getFiltroDePesquisa() {
-		return "";
+		return "NATUREZA_EV";
 	}
 	public static String getItem() {
-		return "";
+		return "A2-Script";
 	}
 	public static String getDescricao() {
-		return "";
+		return "A1 Natrureza Desc";
 	}
 	
 	

@@ -8,6 +8,7 @@ import processos.CadastroDePessoa;
 import processos.CadastroEntesPrevi;
 import processos.CadastroJornadaTrab;
 import processos.CadastroPlanoPrevFundo;
+import processos.CadastroSindicato;
 import processos.CadastroTabVencimento;
 import processos.CadastroTipoBeneficioPrev;
 import processos.CadastroTipoEventoCargo;
@@ -20,21 +21,30 @@ import processos.TabelaGeralCadastroNatureza;
 	
 	@RunWith(Suite.class)
 	@Suite.SuiteClasses({
-		CadastroCategoriaSub.class,
-		CadastroDePessoa.class,
-		CadastroEntesPrevi.class,
-		CadastroPlanoPrevFundo.class,
-		CadastroTipoBeneficioPrev.class,
-		CadastroTipodeVinculo.class,
-		CadastroTipoEventoCargo.class,
-		GruposTiposEvento.class,
-		TabelaGeralCadastroNatureza.class,
-		RegimeJuridico.class,
-		FormasProvimentoEspeciesEventoCargo.class,
-		CadastroPlanoPrevFundo.class,
+		//CadastroDePessoa.class,
+	//CadastroEntesPrevi.class,
+	//	CadastroTipoBeneficioPrev.class,
+	//	CadastroPlanoPrevFundo.class,
+	//	CadastroCategoriaSub.class,
+	//	TabelaGeralCadastroNatureza.class,
+	//	GruposTiposEvento.class,
+	//	RegimeJuridico.class,
+	//	CadastroTipodeVinculo.class,
+	//	FormasProvimentoEspeciesEventoCargo.class,
+	//	CadastroJornadaTrab.class,
+	//	CadastroSindicato.class,
+	//GruposTiposEvento.class,
+	//	CadastroTabVencimento.class,
+		
+	//	CadastroTipoEventoCargo.class,
+		
 		CadastroCargos.class,
-		CadastroJornadaTrab.class,
-		CadastroTabVencimento.class
+		
+		
+		
+		
+	
+		
 		
 	})
 	public class SuitTest {

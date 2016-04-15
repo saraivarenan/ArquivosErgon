@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
+import parametros.CadastroPlanoPrevFundo_Parametros;
 import utilitarios.ContextFirefox;
 import utilitarios.Utilizaveis;
 
@@ -18,14 +19,15 @@ public class CadastroPlanoPrevFundo extends ContextFirefox{
 		Utilizaveis.logarCust();
 		
 		WebElement filtroPesquisa = getDriver().findElement(By.id("srcReg"));
-		filtroPesquisa.sendKeys("Teste_auto");
+		filtroPesquisa.sendKeys(CadastroPlanoPrevFundo_Parametros.getSrcReg());
 		filtroPesquisa.sendKeys(Keys.TAB);
+		Utilizaveis.tempo(2);
 		
 		//Aba Detalhes
 		Utilizaveis.clicarNovo();
 		
 		WebElement drpSigla = getDriver().findElement(By.id("drpBenSigla"));
-		Utilizaveis.buscaDrop(drpSigla, "Auto_Tipo_Bene_Prev - Auto_desc_bene_prev");
+		Utilizaveis.buscaDrop(drpSigla, CadastroPlanoPrevFundo_Parametros.getDrpBenSigla());
 		
 		Utilizaveis.clicarSalvar();
 		
@@ -39,10 +41,10 @@ public class CadastroPlanoPrevFundo extends ContextFirefox{
 		clickNovo.click();
 		
 		WebElement datInicio = getDriver().findElement(By.id("txtRenIni"));
-		datInicio.sendKeys("01012016");
+		datInicio.sendKeys(CadastroPlanoPrevFundo_Parametros.getTxtRenIni());
 		
 		WebElement campRent = getDriver().findElement(By.id("txtRenRent"));
-		campRent.sendKeys("10");
+		campRent.sendKeys(CadastroPlanoPrevFundo_Parametros.getTxtRenRent());
 		
 		Utilizaveis.tempo(3);
 		WebElement clickSalvar =  getDriver().findElement(By.xpath("//div[2]/div/div/div[2]/div[2]/div/div/div/div[2]/div/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));

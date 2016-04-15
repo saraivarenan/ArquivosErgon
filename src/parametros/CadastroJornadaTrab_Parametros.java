@@ -7,16 +7,16 @@ public class CadastroJornadaTrab_Parametros {
 	static String  txfeHoraMen;
 	
 	public static String getTxfeSigla() {
-		return "";
+		return "A2-Script";
 	}
 	public static String getTxfeNome() {
-		return "";
+		return "AutoScript";
 	}
 	public static String getTxfeHorasSem() {
-		return "";
+		return "40";
 	}
 	public static String getTxfeHoraMen() {
-		return "";
+		return "160";
 	}
 
 }

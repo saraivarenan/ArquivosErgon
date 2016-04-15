@@ -5,18 +5,22 @@ public class CadastroEntesPrev_parametros {
 	static String txtNome;
 	static String txtPlanSigla;
 	static String txtPlanIni;
+	static String drpPlanSitu;
 	
+	public static String getDrpPlanSitu() {
+		return "Ativo";
+	}
 	public static String getTxtSigla() {
-		return "";
+		return "A2-Script";
 	}
 	public static String getTxtNome() {
-		return "";
+		return "Teste Auto";
 	}
 	public static String getTxtPlanSigla() {
-		return "";
+		return "A2-Script";
 	}
 	public static String getTxtPlanIni() {
-		return "";
+		return "01012016";
 	}
 	
 

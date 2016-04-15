@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import parametros.CadastroTipoEventoCargo_Parametros;
 import utilitarios.ContextFirefox;
 import utilitarios.Utilizaveis;
 
@@ -18,19 +19,22 @@ public class CadastroTipoEventoCargo extends ContextFirefox {
 		Utilizaveis.clicarNovo();
 		
 		WebElement tipoEvento = getDriver().findElement(By.id("txtTipoevento"));
-		tipoEvento.sendKeys("Teste Automatico");
+		tipoEvento.sendKeys(CadastroTipoEventoCargo_Parametros.getTxtTipoevento());
 		
 		WebElement nomeEvento = getDriver().findElement(By.id("txtNomeevt"));
-		nomeEvento.sendKeys("Nome evento teste");
+		nomeEvento.sendKeys(CadastroTipoEventoCargo_Parametros.getTxtNomeevt());
 		
 		WebElement drpNatureza = getDriver().findElement(By.id("drpNatureza"));
-		Utilizaveis.buscaDrop(drpNatureza, "ScriptAuto NATUREZA - Descrição do Item");
+		Utilizaveis.buscaDrop(drpNatureza, CadastroTipoEventoCargo_Parametros.getDrpNatureza());
 		
 		WebElement drpNatuPrincipal = getDriver().findElement(By.id("drpNatureza_principal"));
-		Utilizaveis.buscaDrop(drpNatuPrincipal, "PROVIMENTO - Provimento");
+		Utilizaveis.buscaDrop(drpNatuPrincipal, CadastroTipoEventoCargo_Parametros.getDrpNatureza_principal());
+		
+		WebElement drpGrupo = getDriver().findElement(By.id("drpGrupo"));
+		Utilizaveis.buscaDrop(drpGrupo, CadastroTipoEventoCargo_Parametros.getDrpGrupo());
 		
 		WebElement prioridadeExerc = getDriver().findElement(By.id("txtPrioridade_exerc"));
-		prioridadeExerc.sendKeys("1");
+		prioridadeExerc.sendKeys(CadastroTipoEventoCargo_Parametros.getTxtPrioridade_exerc());
 		
 		WebElement eventoIngre = getDriver().findElement(By.id("chkEhevingresso"));
 		eventoIngre.click();
@@ -39,7 +43,7 @@ public class CadastroTipoEventoCargo extends ContextFirefox {
 		criarEvento.click();
 		
 		WebElement prioriPag = getDriver().findElement(By.id("txtPrioridadepagto"));
-		prioriPag.sendKeys("1");
+		prioriPag.sendKeys(CadastroTipoEventoCargo_Parametros.getTxtPrioridadepagto());
 		
 		Utilizaveis.clicarSalvar();
 		Utilizaveis.tempo(3);
@@ -54,7 +58,7 @@ public class CadastroTipoEventoCargo extends ContextFirefox {
 		clicNovo.click();
 
 		WebElement cmpEspEvent = getDriver().findElement(By.id("drpDescr_formaprov"));
-		Utilizaveis.buscaDrop(cmpEspEvent, "Admissao_Auto - Descrição_Admissao_Auto");
+		Utilizaveis.buscaDrop(cmpEspEvent, CadastroTipoEventoCargo_Parametros.getDrpDescr_formaprov());
 		
 		Utilizaveis.tempo(2);
 		WebElement clicSalvar = getDriver().findElement(By.xpath("//div[2]/div[2]/div/div/div/div[2]/div/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
@@ -73,7 +77,7 @@ public class CadastroTipoEventoCargo extends ContextFirefox {
 		clicknovoAbaCargo.click();
 		
 		WebElement cmpTipoCargo = getDriver().findElement(By.id("drpDescr"));
-		Utilizaveis.buscaDrop(cmpTipoCargo, "Auto_Tipos_cargo");
+		Utilizaveis.buscaDrop(cmpTipoCargo, CadastroTipoEventoCargo_Parametros.getDrpDescrTipoCargo());
 		
 		Utilizaveis.tempo(3);
 		WebElement clicSalvarCargo = getDriver().findElement(By.xpath("//div[3]/div/div/div[2]/div[2]/div/div/div/div[2]/div/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));

@@ -6,35 +6,44 @@ public class CadastroTipodeVinculo_Parametros {
 	static String inputNome;
 	static String inputIdade;
 	static String inputCategoria;
+	static String inputSubCat;
 	static String inputRegimeJuridico;
 	static String inputRegimePrevidenciario;
 	static String inputPlanoprevidenciario;
-	static String buttonGerarValidade;
+	
 	
 	public static String getInputSigla() {
-		return "";
+		return "A2-Script";
 	}
 	public static String getInputNome() {
-		return "";
+		return "A1-TipovincNome";
 	}
 	public static String getInputIdade() {
-		return "";
+		return "15";
 	}
 	public static String getInputCategoria() {
-		return "";
+	String categoria = CadastroCategoriaSub_Paramentros.getTxtCatSigla()+" - "+CadastroCategoriaSub_Paramentros.getTxtCatNome();
+		return categoria;
+	}
+	
+	public static String getInputSubCat() {
+		String SubCat = CadastroCategoriaSub_Paramentros.getTxtSubCatSigla()+" - "+CadastroCategoriaSub_Paramentros.getTxtSubCatNome();
+		return SubCat;
+		
 	}
 	public static String getInputRegimeJuridico() {
-		return "";
+		String regimeJurid = RegimeJuridico_Parametros.getInputSigla()+ " - "+ RegimeJuridico_Parametros.getInputNome();
+		return regimeJurid;
 	}
 	public static String getInputRegimePrevidenciario() {
-		return "";
+		String regimePrev = CadastroEntesPrev_parametros.getTxtSigla()+" - "+ CadastroEntesPrev_parametros.getTxtNome();
+		return regimePrev;
 	}
 	public static String getInputPlanoprevidenciario() {
-		return "";
+		String planoPrev = CadastroEntesPrev_parametros.getTxtPlanSigla()+" - ";
+		return planoPrev;
 	}
-	public static String getButtonGerarValidade() {
-		return "";
-	}
+
 	
 	
 

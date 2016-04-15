@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import parametros.CadastroDePessoa_Parametros;
 import utilitarios.ContextFirefox;
 import utilitarios.Utilizaveis;
 
@@ -20,23 +21,23 @@ public class CadastroDePessoa extends ContextFirefox {
 	Utilizaveis.clicarNovo();
 		
 		WebElement nomePessoa = getDriver().findElement(By.id("txtNome"));
-		nomePessoa.sendKeys("Teste cadastro Pessoa");
+		nomePessoa.sendKeys(CadastroDePessoa_Parametros.getTxtNome());
 		
 		WebElement cpf =getDriver().findElement(By.id("txtCpf"));
 		cpf.click();
-		cpf.sendKeys("24636290453");
+		cpf.sendKeys(CadastroDePessoa_Parametros.getTxtCpf());
 		
 		WebElement estCivil = getDriver().findElement(By.id("drpEstcivil"));
-		Utilizaveis.buscaDrop(estCivil, "Solteiro");
+		Utilizaveis.buscaDrop(estCivil, CadastroDePessoa_Parametros.getDrpSexo());
 		
 		WebElement escolaridade = getDriver().findElement(By.id("drpEscolaridade"));
-		Utilizaveis.buscaDrop(escolaridade, "Doutorado - Doutorado");
+		Utilizaveis.buscaDrop(escolaridade, CadastroDePessoa_Parametros.getDrpEscolaridade());
 		
 		WebElement dtNasc = getDriver().findElement(By.id("txtDtnasc"));
-		dtNasc.sendKeys("01011990");
+		dtNasc.sendKeys(CadastroDePessoa_Parametros.getTxtDtnasc());
 		
 		WebElement drpSexo = getDriver().findElement(By.id("drpSexo"));
-		Utilizaveis.buscaDrop(drpSexo, "M - Masculino");
+		Utilizaveis.buscaDrop(drpSexo, CadastroDePessoa_Parametros.getDrpSexo());
 		
 		Utilizaveis.tempo(2);
 		
