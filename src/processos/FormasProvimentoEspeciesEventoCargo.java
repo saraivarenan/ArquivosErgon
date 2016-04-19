@@ -43,9 +43,9 @@ public class FormasProvimentoEspeciesEventoCargo extends ContextFirefox {
 		
 		Utilizaveis.tempo(2);
 		Utilizaveis.clicarSalvar();
-		
+		Utilizaveis.tempo(2);
 		//Clicar em outra aba Validações
-		getDriver().findElement(By.xpath("//div[7]/div[1]/div[1]/ul/li[3]/a[2]/em/span/span")).click();
+		getDriver().findElement(By.xpath("//span[contains(text(),'Gerar validações')]")).click();
 		Utilizaveis.tempo(3);
 		
 		WebElement botaoNovoValidacoes = getDriver().findElement(By.xpath(
@@ -66,6 +66,7 @@ public class FormasProvimentoEspeciesEventoCargo extends ContextFirefox {
 		WebElement drpSubcategoria = getDriver().findElement(By.id("drpEdtSubcat"));
 		Utilizaveis.buscaDrop(drpSubcategoria, FromasProvimentoEspeciesEventoCargos_Parametros.getDrpSubcategoria());
 		
+		Utilizaveis.tempo(4);
 		WebElement botaoSalvar = getDriver().findElement(By.xpath(
 				"//div[2]/div[2]/div/div/div/div/div/div[2]/div/div/div/div[2]/div/table/tbody/tr/td/table/tbody/tr/td[2]/table/tbody/tr[2]/td[2]/em/button"));
 		botaoSalvar.click();

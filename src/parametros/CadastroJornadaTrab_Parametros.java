@@ -7,7 +7,7 @@ public class CadastroJornadaTrab_Parametros {
 	static String  txfeHoraMen;
 	
 	public static String getTxfeSigla() {
-		return "A2-Script";
+		return "1A2-Script";
 	}
 	public static String getTxfeNome() {
 		return "AutoScript";

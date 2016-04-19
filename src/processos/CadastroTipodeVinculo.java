@@ -27,8 +27,8 @@ public class CadastroTipodeVinculo extends ContextFirefox {
 		WebElement inputIdade = getDriver().findElement(By.xpath("//input[@name='idade_minima']"));
 		inputIdade.sendKeys(CadastroTipodeVinculo_Parametros.getInputIdade());
 		
-		WebElement checkCommiss = getDriver().findElement(By.id("chkE_comis"));
-		checkCommiss.click();
+		WebElement checkReq = getDriver().findElement(By.id("chkE_requis"));
+		checkReq.click();
 		
 		Utilizaveis.clicarSalvar();
 		

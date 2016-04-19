@@ -42,6 +42,9 @@ public class CadastroTipoEventoCargo extends ContextFirefox {
 		WebElement criarEvento = getDriver().findElement(By.id("chkCriavinculo"));
 		criarEvento.click();
 		
+		WebElement criarPermiteAtiv = getDriver().findElement(By.id("chkPermite_ativo"));
+		criarPermiteAtiv.click();
+		
 		WebElement prioriPag = getDriver().findElement(By.id("txtPrioridadepagto"));
 		prioriPag.sendKeys(CadastroTipoEventoCargo_Parametros.getTxtPrioridadepagto());
 		
